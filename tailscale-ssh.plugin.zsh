@@ -6,7 +6,7 @@
 if ((( $+commands[tailscale] ) && ( $+commands[jq] ))); then
   _tailscale_status=$(tailscale status --json)
   _tailscale_suffix=$(echo $_tailscale_status | jq -r '.MagicDNSSuffix')
-  zstyle -s ':completion:*:hosts' hosts _tailscale_hosts
+  zstyle -a ':completion:*:hosts' hosts _tailscale_hosts
   # Do we have a MagicDNS suffix?
   if [ -z "$_tailscale_suffix" ]; then
     _tailscale_hosts+=($(tailscale status --json | jq -r '[.Peer | to_entries[] | .value.DNSName | join(" ")'))
