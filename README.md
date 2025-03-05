@@ -10,7 +10,7 @@ This zsh plugin provides host completion based off `tailscale status`. It automa
 git clone https://github.com/Seraphin-/zsh-tailscale-ssh "$ZSH_CUSTOM/plugins/tailscale-ssh"
 ```
 
-Add `tailscale-ssh` to your `plugins` in `$zshrc`.
+Add `tailscale-ssh` to your `plugins` in `.zshrc`.
 
 ## License
 MIT
